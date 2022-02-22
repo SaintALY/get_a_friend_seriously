@@ -1,0 +1,51 @@
+.offer_grid {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+
+.container {
+  background-color: $background-nav-foot;
+  border-radius: 5px;
+  width: 370px;
+  margin: 10px;
+  margin-inline: auto;
+  box-shadow: $shadow;
+
+  .card_title {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+
+  .title {
+    font-size: 30px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+
+  .card_info {
+    display: flex;
+    justify-content: space-between;
+    font-size: medium;
+    font-weight: 500;
+  }
+
+  .description {
+    font-size: 13px;
+  }
+
+  .inner-container {
+    margin-inline-start: -12px;
+    margin-inline-end: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+
+  }
+
+  ul {
+    list-style-type: none;
+  }
+}
