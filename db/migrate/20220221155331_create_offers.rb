@@ -3,7 +3,6 @@ class CreateOffers < ActiveRecord::Migration[6.1]
     create_table :offers do |t|
       t.string :title
       t.text :description
-      t.string :picture_url
       t.string :location
       t.float :price
       t.datetime :start_time
