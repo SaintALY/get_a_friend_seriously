@@ -1,19 +1,31 @@
-<h1>INDEX</h1>
+<div class="offer_grid">
+  <% @offers.each do |element| %>
+      <div class="container">
+        <div class="inner-container">
+          <ul>
+              <%= cl_image_tag(element.photo.key) if element.photo.key %>
 
+              <div class="card_title">
+                <li class="title"><%= element.title %></li>
+                <%= image_tag "https://kitt.lewagon.com/placeholder/users/cveneziani", class: "avatar-square", alt: "avatar" %>
+              </div>
+              <li class="description"><%= element.description %></li>
+              <hr>
+              <div class="card_info">
+                <li><%= element.location %></li>
+                <li class="price"><%= element.price %> €</li>
+              </div>
+              <!--
+              <li class="start"><%= element.start_time %></li>
+              <li class="end"><%= element.end_time %></li>
+              <li>Uder ID: <%= element.user_id %></li>
+              <li>Created: <%= element.created_at %></li>
+              <li>Updated: <%= element.updated_at %></li>
+              -->
+          </ul>
+        </div>
 
-<% @offers.each do |element| %>
-    <div class="container">
-    <ul>
-        <%= cl_image_tag(element.photo.key) if element.photo.key %>
-        <li>Title: <%= element.title %></li>
-        <li>Description: <%= element.description %></li>
-        <li>Location: <%= element.location %></li>
-        <li>Price: <%= element.price %></li>
-        <li>Start: <%= element.start_time %></li>
-        <li>End: <%= element.end_time %></li>
-        <li>Uder ID: <%= element.user_id %></li>
-        <li>Created: <%= element.created_at %></li>
-        <li>Updated: <%= element.updated_at %></li>
-    </ul>
-    </div>
-    <% end %>
+      </div>
+      <% end %>
+
+</div>
