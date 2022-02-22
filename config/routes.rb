@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  devise_for :users
+  get 'users/index'
+  devise_for :users, path_prefix: 'd'
+  resources :users, only: [:show]
   root to: 'offers#index'
 
   get '/offers', to: 'offers#index', as: :offers # in link to helper say offers_path
@@ -8,7 +10,9 @@ Rails.application.routes.draw do
   delete '/bookings/:id', to: 'bookings#destroy', as: :booking
   get '/offers/new', to: 'offers#new', as: :new_offer
   post '/offers', to: 'offers#create'
-  get '/offers/:id', to:  'offers#edit', as: :update_offer
+  get '/offers/:id', to: 'offers#edit', as: :update_offer
   patch '/offers/:id', to: 'offers#update'
+  get '/users', to: 'users#index'
+  get '/users/:id', to: 'users#show'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
