@@ -1,6 +1,8 @@
 class OffersController < ApplicationController
+    
     def index
         @offers = Offer.all
+        @user = policy_scope(User).order(created_at: :desc)
     end
 
     def new
