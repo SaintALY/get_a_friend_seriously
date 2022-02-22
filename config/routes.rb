@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   post '/offers', to: 'offers#create'
   get '/offers/:id', to: 'offers#edit', as: :update_offer
   patch '/offers/:id', to: 'offers#update'
+  # USER Controller
   get '/users', to: 'users#index'
   get '/users/:id', to: 'users#show'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
