@@ -30,8 +30,12 @@
   </head>
 
   <body>
-    <div class="container">
+    <%= render "layouts/navbar" %>
+
+    <div class="pages">
       <%= yield %>
     </div>
+
+    <%= render "layouts/footer" %>
   </body>
 </html>
