@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root to: 'offers#index'
 
   get '/offers', to: 'offers#index', as: :offers # in link to helper say offers_path
-  get '/offers/:id', to: 'offers#view', as: :offer
+  get '/offers/:id', to: 'offers#show', as: :offer
   post '/offers/:offer_id/bookings', to: 'bookings#create', as: :offer_booking
   delete '/bookings/:id', to: 'bookings#destroy', as: :booking
   get '/offers/new', to: 'offers#new', as: :new_offer
