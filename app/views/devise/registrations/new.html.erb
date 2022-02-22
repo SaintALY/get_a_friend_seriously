@@ -4,6 +4,16 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
+    <!-- First/Last Name are required for Sign Up -->
+    <%= f.input :firstname,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "firstname" }%>
+    <%= f.input :lastname,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "lastname" }%>
+    <!-- Auto generated field from device -->            
     <%= f.input :email,
                 required: true,
                 autofocus: true,
