@@ -52,7 +52,6 @@ puts 'Creating 15 offers'
   offer = Offer.new(
     title: Faker::Name.male_first_name,
     description: Faker::Hipster.paragraph,
-    picture_url: Faker::LoremFlickr.image,
     location: Faker::Address.city,
     price: rand(1.0...100.0).round(2),
     start_time: Faker::Time.backward(days: rand(1...30), period: :evening),
