@@ -1,3 +1,14 @@
 <h1><%= @user.firstname %></h1>
-<%= image_tag @user.picture_url %>
-<h5><%= @user.email%></h5>
+<%= image_tag(@user.picture_url, class: 'rounded-circle') if @user.picture_url %>
+<div>
+  <container>
+    <ul>
+      <li><strong>First name: </strong><%= @user.firstname %></li>
+      <li><strong>Last name: </strong><%= @user.lastname %></li>
+      <li><%= @user.description %></li>
+      <li><strong>Email: </strong><%= @user.email %></li>
+      <li><strong>Interests: </strong><%= @user.interests %></li>
+      <li><strong>Location: </strong><%= @user.location %></li>
+    </ul>
+  </container>
+</div>

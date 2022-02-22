@@ -20,7 +20,7 @@ puts 'Creating 10 new male users..'
     email: Faker::Internet.email,
     interests: Faker::Hobby.activity,
     password: '123456',
-    picture_url: Faker::LoremFlickr.image(size: "50x60", search_terms: ['male_headshot']),
+    picture_url: Faker::LoremFlickr.image(size: "50x60"),
     location: Faker::Address.city
   )
   user.save!
@@ -35,7 +35,7 @@ puts 'Creating 10 new female users..'
     email: Faker::Internet.email,
     interests: Faker::Hobby.activity,
     password: '123456',
-    picture_url: Faker::LoremFlickr.image(size: "50x60", search_terms: ['female_headshot']),
+    picture_url: Faker::LoremFlickr.image(size: "50x60"),
     location: Faker::Address.city
   )
   user.save!

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   get 'users/index'
-  devise_for :users, path_prefix: 'd'
+  devise_for :users
   resources :users, only: [:show]
   root to: 'offers#index'
 
