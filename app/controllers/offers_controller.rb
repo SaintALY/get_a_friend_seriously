@@ -14,7 +14,7 @@ class OffersController < ApplicationController
     end
 
     def show
-        @offer = Offer.find(params[:id])
+        @offer = Offer.find_by_id(params[:id])
     end
 
     def edit
