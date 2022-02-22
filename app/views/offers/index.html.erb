@@ -4,6 +4,7 @@
 <% @offer.each do |element| %>
     <div class="container">
     <ul>
+        <%= image_tag(element.picture_url, class: 'rounded-circle') if element.picture_url %>
         <li>Title: <%= element.title %></li>
         <li>Description: <%= element.description %></li>
         <li>Picture: <%= element.picture_url %></li>

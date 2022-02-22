@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get '/offers/:id', to: 'offers#show', as: :offer
   post '/offers/:offer_id/bookings', to: 'bookings#create', as: :offer_booking
   delete '/bookings/:id', to: 'bookings#destroy', as: :booking
-  get '/offers/new', to: 'offers#new', as: :new_offer
+  get '/offer/new', to: 'offers#new', as: :new_offer
   post '/offers', to: 'offers#create'
   get '/offers/:id', to: 'offers#edit', as: :update_offer
   patch '/offers/:id', to: 'offers#update'
