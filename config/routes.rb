@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get '/offers', to: 'offers#index', as: :offers # in link to helper say offers_path
   get '/offers/new', to: 'offers#new', as: :new_offer
   get '/offers/:id', to: 'offers#show', as: :offer
-  post '/offers/:offer_id/bookings', to: 'bookings#create', as: :offer_booking
+  post '/offers/:offer_id/bookings', to: 'bookings#create', as: :offer_bookings
   delete '/bookings/:id', to: 'bookings#destroy', as: :booking
   post '/offers', to: 'offers#create'
   get '/offers/:id', to: 'offers#edit', as: :update_offer
