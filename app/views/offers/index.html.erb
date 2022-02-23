@@ -1,3 +1,4 @@
+<%= render "layouts/components/banner" %>
 <div class="offer_grid">
   <% @offers[0..3].each do |element| %>
               <%= cl_image_tag(element.photo.key) if element.photo.key %>
@@ -13,22 +14,9 @@
                   <p><%= element.description %> </p>
                   </div>
                 <hr>
-
                 </div>
               </div>
-              <!--
-              <li class="start"><%= element.start_time %></li>
-              <li class="end"><%= element.end_time %></li>
-              <li>Uder ID: <%= element.user_id %></li>
-              <li>Created: <%= element.created_at %></li>
-              <li>Updated: <%= element.updated_at %></li>
-              -->
-
-
-
-
-      <% end %>
-
+  <% end %>
 </div>
 
 
