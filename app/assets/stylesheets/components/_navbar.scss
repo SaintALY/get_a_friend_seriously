@@ -16,4 +16,13 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 200px;
+
+}
+
+.dropdown-menu {
+  background-color: $text-light;
+
+  a:hover {
+    background-color: $background-nav-foot;
+  }
 }

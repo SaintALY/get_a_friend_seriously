@@ -1,14 +1,16 @@
 .banner {
   background-size: cover;
   padding: 150px 0;
+  min-height: 600px;
 }
 
 .banner h1 {
   margin: 0;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 32px;
+  font-size: 25px;
   font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .banner p {
@@ -27,14 +29,10 @@
 }
 
 .book-now {
-  background-color: #dfc26a20;
-  box-shadow: #353433;
-  border-radius: 5px;
-  padding: 10px;
   margin-bottom: 5px;
   color: $text-light;
+}
 
-  :hover {
-    color: $text-dark;
-  }
+a:hover {
+  color: $text-dark;
 }
