@@ -1,17 +1,55 @@
-<h1>SHOW OFFERS</h1>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <p class="h2"><%= @offer.title %></p>
+    <div>
+  </div>
 
-<%= @offer.title %>
-<%= @offer.description %>
+  <div class="row">
+    <div class="col">
+      <p>* 4.75</p>
+    <div>
+    <div class="col">
+      <p>25 reviews</p>
+    <div>
+    <div class="col">
+      <p class="h6"><%= @offer.location %></p>
+    <div>
+    <div class="col">
+      <p></p>
+    <div>
+    <div class="col">
+      <p>Share</p>
+    <div>
+  </div>
 
-<%= @offer.location %>
-<%= @offer.price %>
-<%= @offer.start_time %>
-<%= @offer.end_time %>
-<%= @offer.user_id %>
-<%= @offer.created_at %>
-<%= @offer.updated_at %>
+  <div class="row">
+    <div class="col">
+      <p><%= @offer.description %></p>
+    <div>
+    <div class="col">
+      <p><%= @offer.price %></p>
+    </div>
+    <div class="col">
+      <%= simple_form_for [@offer, @booking] do |f| %>
+        <%= f.button :submit, input_html: { class: "btn btn-success" } %>
+      <% end %>
+    </div>
+</div>
 
-<%= simple_form_for [@offer, @booking] do |f| %>
-  
-  <%= f.button :submit %>
-<% end %>
+<!--
+  <%= @offer.title %>
+  <%= @offer.description %>
+
+  <%= @offer.location %>
+  <%= @offer.price %>
+  <%= @offer.start_time %>
+  <%= @offer.end_time %>
+  <%= @offer.user_id %>
+  <%= @offer.created_at %>
+  <%= @offer.updated_at %>
+
+  <%= simple_form_for [@offer, @booking] do |f| %>
+    <%= f.button :submit %>
+  <% end %>
+-->
