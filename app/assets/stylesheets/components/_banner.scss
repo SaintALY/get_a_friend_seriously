@@ -1,6 +1,5 @@
 .banner {
   background-size: cover;
-  background-position: center;
   padding: 150px 0;
 }
 
@@ -17,4 +16,25 @@
   color: white;
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.container-banner {
+  margin-left: 50px;
+  background-color:#dfc26a40 ;
+  width: 600px;
+  padding: 30px;
+  border-radius: 5px;
+}
+
+.book-now {
+  background-color: #dfc26a20;
+  box-shadow: #353433;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 5px;
+  color: $text-light;
+
+  :hover {
+    color: $text-dark;
+  }
 }
