@@ -10,3 +10,8 @@
 <%= @offer.user_id %>
 <%= @offer.created_at %>
 <%= @offer.updated_at %>
+
+<%= simple_form_for [@offer, @booking] do |f| %>
+  
+  <%= f.button :submit %>
+<% end %>
