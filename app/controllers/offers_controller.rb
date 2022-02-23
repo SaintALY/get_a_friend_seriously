@@ -24,7 +24,7 @@ class OffersController < ApplicationController
 
     def update
         if @offer.update(offer_params)
-          redirect_to @offer, notice: 'Offer was successfully updated.'
+          redirect_to @offer, notice: 'Your Friend-Search-Offer was successfully updated.'
         else
           render :edit
         end
@@ -32,7 +32,7 @@ class OffersController < ApplicationController
 
     def destroy
         @offer.destroy
-        redirect_to offer_url, notice: 'Offer was successfully destroyed.'
+        redirect_to offer_url, notice: 'Your Friend-Search-Offer was successfully destroyed.'
     end
 
     private
