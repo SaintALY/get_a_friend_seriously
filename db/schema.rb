@@ -76,7 +76,6 @@ ActiveRecord::Schema.define(version: 2022_02_22_160529) do
     t.string "firstname"
     t.text "description"
     t.string "interests"
-    t.string "picture_url"
     t.string "location"
     t.string "lastname"
     t.index ["email"], name: "index_users_on_email", unique: true

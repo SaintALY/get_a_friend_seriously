@@ -7,7 +7,7 @@
     <ul class='list-unstyled'>
     <% @users.each do |user| %>
       <div class='mt-3'>
-      <%= image_tag(user.picture_url, class: 'rounded-circle') if user.picture_url %>
+      <%= cl_image_tag(user.photo.key) if user.photo.attached? %>
       <li><strong>First name: </strong><%= user.firstname %></li>
       <li><strong>Last name: </strong><%= user.lastname %></li>
       <li><%= user.description %></li>
