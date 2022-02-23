@@ -15,5 +15,7 @@ Rails.application.routes.draw do
   # USER Controller
   get '/users', to: 'users#index'
   get '/users/:id', to: 'users#show'
+  # DASHBOARD Controller
+  get '/users/:user_id/dashboard', to: 'dashboards#show', as: :dashboard
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
