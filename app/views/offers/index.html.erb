@@ -6,7 +6,7 @@
               <%= cl_image_tag(element.photo.key) if element.photo.key %>
 
               <div class="card_title">
-                <li class="title"><%= element.title %></li>
+                <li class="title"><%= link_to element.title, "/offers/#{element.id}" %></li>
                 <%= image_tag "https://kitt.lewagon.com/placeholder/users/cveneziani", class: "avatar-square", alt: "avatar" %>
               </div>
               <li class="description"><%= element.description %></li>
