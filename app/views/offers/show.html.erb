@@ -5,8 +5,6 @@
     <p>Location: <%= @offer.title %></p>
   <div class="offers-body">
     <p>Price : <%= @offer.price %> €</p>
-    <p>Booking start: <%= @offer.start_time %></p>
-    <p>Booking end: <%= @offer.end_time %></p>
     <p>Created at: <%= @offer.created_at %></p>
     <div class="description">
       <%= @offer.description %>
@@ -14,11 +12,11 @@
   </div>
 
 
-
   <%= simple_form_for [@offer, @booking] do |f| %>
+    <%= f.input :start_date, as: :date, html5: true %>
+    <%= f.input :end_date, as: :date, html5: true %>
   <div class="form-actions middle">
     <%= f.button :submit %>
   </div>
   <% end %>
 </div>
-
