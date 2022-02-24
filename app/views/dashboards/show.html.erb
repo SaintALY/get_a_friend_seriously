@@ -12,7 +12,7 @@
       <p class="h4">Here are your bookings</p>
     </div>
   </div>
-  
+
   <!-- TODO: Needs styling Bookings -->
   <div class="row">
       <% @bookings.each do |element| %>
@@ -21,9 +21,9 @@
             <p><%= element.offer.description.truncate(50)  %></p>
             <p>Map: <%= element.offer.location  %></p> <!-- TODO: Show map -->
             <p>Price: <%= element.offer.price  %></p>
-            <p>Event Starts: <%= element.offer.start_time.strftime("%A, %b %d")  %></p>
-            <p>Event Ends: <%= element.offer.end_time.strftime("%A, %b %d")  %></p>
-            <p>Event created on: <%= element.offer.end_time.strftime("%A, %b %d")  %></p>
+            <p>Event Starts: <%= element.start_date.strftime("%A, %b %d")  %></p>
+            <p>Event Ends: <%= element.end_date.strftime("%A, %b %d")  %></p>
+            <p>Event created on: <%= element.offer.created_at.strftime("%A, %b %d")  %></p>
             <p>-------------</p>
           </div>
       <% end %>
