@@ -1,3 +1,23 @@
+.with-map {
+  display: flex;
+  justify-content: space-between;
+
+  .left {
+    width: 850px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 30px;
+    margin-bottom:50px;
+  }
+  .right {
+    width: 450px;
+    margin-left: 10px;
+    margin-right: 30px;
+    margin-top: 10px;
+  }
+}
+
 .offer_grid1 {
   display: flex;
   flex-wrap: wrap;
