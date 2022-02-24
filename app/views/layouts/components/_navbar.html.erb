@@ -17,7 +17,11 @@
               <li class="nav-item">
               </li>
               <li class="nav-item dropdown">
-                <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+                <% if current_user.photo.attached? && !current_user.nil? %>
+                  <%= cl_image_tag current_user.photo.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+                <% else  %>
+                  <%= image_tag "https://res.cloudinary.com/get-a-friend-seriously/image/upload/v1645708667/avatar_ho49au.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+                <% end %>
 
 
                   <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
