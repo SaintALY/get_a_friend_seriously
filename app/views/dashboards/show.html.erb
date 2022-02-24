@@ -1,16 +1,31 @@
-<h1>Hi <%= @user.firstname.downcase.capitalize() %> <%= @user.lastname.downcase.capitalize() %></h1>
-
 <%= @check %>
 
-<div>
-  <container>
-    <h2>Here are your bookings</h2>
-      <ul>
-      <li>Nada</li>
-      </ul>
-    <h2>Here are your offers</h2>
-      <ul>
-      <li>Nada</li>
-      </ul>
-  </container>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <p class="h1">Hi <%= @user.firstname.downcase.capitalize() %> <%= @user.lastname.downcase.capitalize() %></p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <p class="h4">Here are your bookings</p>
+    </div>
+  </div>
+  
+  <!-- TODO: Needs styling Bookings -->
+  <div class="row">
+      <% @bookings.each do |element| %>
+          <div class="col-3">
+            <p><%= element.offer.title  %></p>
+            <p><%= element.offer.description.truncate(50)  %></p>
+            <p>Map: <%= element.offer.location  %></p> <!-- TODO: Show map -->
+            <p>Price: <%= element.offer.price  %></p>
+            <p>Event Starts: <%= element.offer.start_time.strftime("%A, %b %d")  %></p>
+            <p>Event Ends: <%= element.offer.end_time.strftime("%A, %b %d")  %></p>
+            <p>Event created on: <%= element.offer.end_time.strftime("%A, %b %d")  %></p>
+            <p>-------------</p>
+          </div>
+      <% end %>
+   </div>
 </div>
