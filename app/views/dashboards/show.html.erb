@@ -1,31 +1,37 @@
 <%= @check %>
-
-<div class="container-fluid">
-  <div class="row">
-    <div class="col">
-      <p class="h1">Hi <%= @user.firstname.downcase.capitalize() %> <%= @user.lastname.downcase.capitalize() %></p>
+<div class="dashboard">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <p class="h4">Hi, <%= @user.firstname.downcase.capitalize() %> here are your bookings</p>
+      </div>
     </div>
-  </div>
 
-  <div class="row">
-    <div class="col">
-      <p class="h4">Here are your bookings</p>
-    </div>
-  </div>
 
-  <!-- TODO: Needs styling Bookings -->
-  <div class="row">
-      <% @bookings.each do |element| %>
-          <div class="col-3">
-            <p><%= element.offer.title  %></p>
-            <p><%= element.offer.description.truncate(50)  %></p>
-            <p>Map: <%= element.offer.location  %></p> <!-- TODO: Show map -->
-            <p>Price: <%= element.offer.price  %></p>
-            <p>Event Starts: <%= element.start_date.strftime("%A, %b %d")  %></p>
-            <p>Event Ends: <%= element.end_date.strftime("%A, %b %d")  %></p>
-            <p>Event created on: <%= element.offer.created_at.strftime("%A, %b %d")  %></p>
-            <p>-------------</p>
+
+    <div class="row">
+          <div class="card-my-orders">
+            <% @bookings.each do |element| %>
+            <div class="col-33">
+              <p class="my-bookings-title"><%= element.offer.title  %></p>
+              <p><%= element.offer.description  %></p>
+              <p>Map: <%= element.offer.location  %></p>
+              <p>Price: <%= element.offer.price  %> €</p>
+              <p>Event Starts: <%= element.start_date.strftime("%A, %b %d")  %></p>
+              <p>Event Ends: <%= element.end_date.strftime("%A, %b %d")  %></p>
+              <p>Event created on: <%= element.offer.created_at.strftime("%A, %b %d")  %></p>
+              <p>-------------</p>
+           </div>
+                <!-- TODO: map should show location of -->
+            <div class="map-of-order">
+             <div style="width: 100%; height: 350px; border-radius: 5px;"
+                data-controller="mapbox"
+                data-mapbox-markers-value="<%= @markers.to_json %>"
+                data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+              </div>
+            </div>
+             <% end %>
           </div>
-      <% end %>
-   </div>
+    </div>
+  </div>
 </div>
