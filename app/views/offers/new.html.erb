@@ -1,12 +1,17 @@
-<h1>NEW OFFERS</h1>
+<div class="login">
+  <h1>create an offer</h1>
 
 
 
-<%= simple_form_for(@offer) do |f| %>
-  <%= f.input :title %>
-  <%= f.input :description, as: :text %>
-  <%= f.input :photo, as: :file %>
-  <%= f.input :location %>
-  <%= f.input :price %>
-  <%= f.button :submit %>
-<% end %>
+  <%= simple_form_for(@offer) do |f| %>
+    <%= f.input :title %>
+    <%= f.input :description, as: :text %>
+    <%= f.input :photo, as: :file %>
+    <%= f.input :location %>
+    <%= f.input :price %>
+    <div class="form-actions middle">
+      <%= f.button :submit %>
+    </div>
+  <% end %>
+
+</div>
