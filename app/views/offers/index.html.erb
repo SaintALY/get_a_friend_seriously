@@ -1,3 +1,76 @@
+<%= render "layouts/components/banner" %>
+<div class="offer_grid1">
+
+
+    <% @offers[0..0].each do |element| %>
+                <%= cl_image_tag(element.photo.key) if element.photo.key %>
+                <div class="card-trip picture1">
+                  <%= image_tag "https://kitt.lewagon.com/placeholder/users/cveneziani", class: "card-image", alt: "image" %>
+                  <div class="card-trip-infos">
+                    <div>
+                      <div class="price">
+                        <h2><%= link_to element.title, "/offers/#{element.id}" %></h2>
+                        <h2 class="card-trip-pricing"><%= element.price %> €</h2>
+                      </div>
+                      <p><%= element.description %> </p>
+                    </div>
+                  <hr>
+                  </div>
+                </div>
+    <% end %>
+      <% @offers[0..0].each do |element| %>
+                <%= cl_image_tag(element.photo.key) if element.photo.key %>
+                <div class="card-trip picture2">
+                  <%= image_tag "https://kitt.lewagon.com/placeholder/users/cveneziani", class: "card-image", alt: "image" %>
+                  <div class="card-trip-infos">
+                    <div>
+                      <div class="price">
+                        <h2><%= link_to element.title, "/offers/#{element.id}" %></h2>
+                        <h2 class="card-trip-pricing"><%= element.price %> €</h2>
+                      </div>
+                      <p><%= element.description %> </p>
+                    </div>
+                  <hr>
+                  </div>
+                </div>
+    <% end %>
+      <% @offers[0..0].each do |element| %>
+                <%= cl_image_tag(element.photo.key) if element.photo.key %>
+                <div class="card-trip picture3">
+                  <%= image_tag "https://kitt.lewagon.com/placeholder/users/cveneziani", class: "card-image", alt: "image" %>
+                  <div class="card-trip-infos">
+                    <div>
+                      <div class="price">
+                        <h2><%= link_to element.title, "/offers/#{element.id}" %></h2>
+                        <h2 class="card-trip-pricing"><%= element.price %> €</h2>
+                      </div>
+                      <p><%= element.description %> </p>
+                    </div>
+                  <hr>
+                  </div>
+                </div>
+    <% end %>
+      <% @offers[0..0].each do |element| %>
+                <%= cl_image_tag(element.photo.key) if element.photo.key %>
+                <div class="card-trip picture4">
+                  <%= image_tag "https://kitt.lewagon.com/placeholder/users/cveneziani", class: "card-image", alt: "image" %>
+                  <div class="card-trip-infos">
+                    <div>
+                      <div class="price">
+                        <h2><%= link_to element.title, "/offers/#{element.id}" %></h2>
+                        <h2 class="card-trip-pricing"><%= element.price %> €</h2>
+                      </div>
+                      <p><%= element.description %> </p>
+                    </div>
+                  <hr>
+                  </div>
+                </div>
+    <% end %>
+
+
+</div>
+
+
 <div class="offer_grid">
   <% @offers.each do |element| %>
       <div class="container">
@@ -9,7 +82,7 @@
                 <li class="title"><%= link_to element.title, "/offers/#{element.id}" %></li>
                 <%= image_tag "https://kitt.lewagon.com/placeholder/users/cveneziani", class: "avatar-square", alt: "avatar" %>
               </div>
-              <li class="description"><%= element.description %></li>
+              <div class="description"><%= element.description %></div>
               <hr>
               <div class="card_info">
               <!--location here  -->

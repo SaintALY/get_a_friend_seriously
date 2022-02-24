@@ -1,55 +1,24 @@
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <p class="h2"><%= @offer.title %></p>
-    <div>
+
+<div class="login">
+  <h1><%= @offer.title %>'s offer</h1>
+
+    <p>Location: <%= @offer.title %></p>
+  <div class="offers-body">
+    <p>Price : <%= @offer.price %> €</p>
+    <p>Booking start: <%= @offer.start_time %></p>
+    <p>Booking end: <%= @offer.end_time %></p>
+    <p>Created at: <%= @offer.created_at %></p>
+    <div class="description">
+      <%= @offer.description %>
+    </div>
   </div>
 
-  <div class="row">
-    <div class="col">
-      <p>* 4.75</p>
-    <div>
-    <div class="col">
-      <p>25 reviews</p>
-    <div>
-    <div class="col">
-      <p class="h6"><%= @offer.location %></p>
-    <div>
-    <div class="col">
-      <p></p>
-    <div>
-    <div class="col">
-      <p>Share</p>
-    <div>
-  </div>
 
-  <div class="row">
-    <div class="col">
-      <p><%= @offer.description %></p>
-    <div>
-    <div class="col">
-      <p><%= @offer.price %></p>
-    </div>
-    <div class="col">
-      <%= simple_form_for [@offer, @booking] do |f| %>
-        <%= f.button :submit, input_html: { class: "btn btn-success" } %>
-      <% end %>
-    </div>
-</div>
-
-<!--
-  <%= @offer.title %>
-  <%= @offer.description %>
-
-  <%= @offer.location %>
-  <%= @offer.price %>
-  <%= @offer.start_time %>
-  <%= @offer.end_time %>
-  <%= @offer.user_id %>
-  <%= @offer.created_at %>
-  <%= @offer.updated_at %>
 
   <%= simple_form_for [@offer, @booking] do |f| %>
+  <div class="form-actions middle">
     <%= f.button :submit %>
+  </div>
   <% end %>
--->
+</div>
+
