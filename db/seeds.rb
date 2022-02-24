@@ -9,6 +9,7 @@
 require 'faker'
 
 puts 'Removing old user data'
+Offer.delete_all
 User.delete_all
 
 puts 'Creating 10 new male users..'
@@ -48,15 +49,33 @@ Offer.delete_all
 puts 'Creating 15 offers'
 15.times do
   offer = Offer.new(
-    title: Faker::Name.male_first_name,
+    title: Faker::Book.title,
     description: Faker::Hipster.paragraph,
     location: Faker::Address.city,
     price: rand(1.0...100.0).round(2),
     start_time: Faker::Time.backward(days: rand(1...30), period: :evening),
     end_time: Faker::Time.forward(days: rand(1..3), period: :evening),
-    user_id: rand(1..20)
+    user_id: rand(1..20) # TODO: breaks if run twice needs to drop DB
   )
   offer.save!
+end
+
+puts '15 offers created!'
+
+# REVIEW
+puts 'Starting seed to render review data for testing...'
+
+puts 'Removing old review data'
+OfferReview.delete_all
+
+puts 'Creating 15 Reviews'
+15.times do
+  review = OfferReview.new(
+    description: Faker::GreekPhilosophers.quote,
+    stars: rand(1..5),
+    offer_id: rand(1..14)
+  )
+  review.save!
 end
 
 puts '15 offers created!'

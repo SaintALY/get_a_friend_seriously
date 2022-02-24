@@ -1,0 +1,11 @@
+<div>
+  <h1>create a Review</h1>
+
+  <%= simple_form_for(@review) do |f| %>
+    <%= f.input :description, as: :text %>
+    <%= f.input :stars, collection: 1..5 %>
+    <div class="form-actions middle">
+      <%= f.button :submit %>
+    </div>
+  <% end %>
+</div>

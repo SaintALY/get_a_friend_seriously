@@ -1,8 +1,5 @@
 <div class="login">
   <h1>create an offer</h1>
-
-
-
   <%= simple_form_for(@offer) do |f| %>
     <%= f.input :title %>
     <%= f.input :description, as: :text %>
@@ -13,5 +10,4 @@
       <%= f.button :submit %>
     </div>
   <% end %>
-
 </div>

@@ -1,0 +1,14 @@
+<h1>Review</h1>
+
+<%= @review.description %>
+<% if @review.stars == 1 %>
+    <p>*</p>
+<% elsif @review.stars == 2 %>
+    <p>**</p>
+<% elsif @review.stars == 3 %>
+    <p>***</p>
+<% elsif @review.stars == 4 %>
+    <p>****</p>
+<% elsif @review.stars == 5 %>
+    <p>*****</p>
+<% end %>
