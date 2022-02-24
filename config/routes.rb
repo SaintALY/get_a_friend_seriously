@@ -17,8 +17,6 @@ Rails.application.routes.draw do
   get '/users/:id', to: 'users#show'
   # DASHBOARD Controller
   get '/users/:user_id/dashboard', to: 'dashboards#show', as: :dashboard
-  # OFFER_REVIEW Controller
-  get '/offers/review/new', to: 'offer_review#new', as: :new_offer_review
-  get '/offers/review/:id', to: 'offer_review#show', as: :offer_review
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
