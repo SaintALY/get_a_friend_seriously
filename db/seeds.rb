@@ -304,7 +304,6 @@ offer = Offer.new(
 )
 offer.save!
 
-
 puts '15 offers created!'
 
 
