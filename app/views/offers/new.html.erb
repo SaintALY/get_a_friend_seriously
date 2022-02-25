@@ -4,9 +4,8 @@
   <%= simple_form_for(@offer) do |f| %>
     <%= f.input :title %>
     <%= f.input :description, as: :text %>
-    <%= f.input :photo, as: :file %>
     <%= f.input :location %>
-    <div class="price-input"><%= f.input :price%></div>
+    <div class="price-input"><%= f.input :price, placeholder: '0,00 €'%></div>
     <div class="form-actions middle">
       <%= f.button :submit %>
     </div>

@@ -43,6 +43,7 @@
   margin-inline: auto;
   box-shadow: $shadow;
   margin-bottom: 20px;
+  padding:2px;
 
   .card_title {
     display: flex;
@@ -78,6 +79,7 @@
   }
 
   ul {
+
     list-style-type: none;
   }
 }
@@ -152,4 +154,11 @@
   a {
     color: $text-dark;
   }
+
+}
+
+.location-highlight {
+  margin-left: 15px;
+  color: $text-dark;
+  font-size: medium;
 }
