@@ -1,6 +1,6 @@
 <%= render "layouts/components/banner" %>
 <div class="offer_grid1">
-y
+
     <% @offers[0..0].each do |element| %>
                 <div class="card-trip picture1">
                 <% if element.user.photo.attached? %>
@@ -12,7 +12,7 @@ y
                         <h2><%= link_to element.title.truncate(20), "/offers/#{element.id}" %></h2>
                         <h2 class="card-trip-pricing"><%= element.price %> €</h2>
                       </div>
-                      <p><%= element.description.truncate(250)%> </p>
+                      <p><%= element.description.truncate(200)%> </p>
                     </div>
                   <hr>
                   </div>
@@ -33,7 +33,7 @@ y
                         <h2><%= link_to element.title.truncate(20), "/offers/#{element.id}" %></h2>
                         <h2 class="card-trip-pricing"><%= element.price %> €</h2>
                       </div>
-                      <p><%= element.description.truncate(250) %> </p>
+                      <p><%= element.description.truncate(200) %> </p>
                     </div>
                   <hr>
                   </div>
@@ -54,7 +54,7 @@ y
                         <h2><%= link_to element.title.truncate(20), "/offers/#{element.id}" %></h2>
                         <h2 class="card-trip-pricing"><%= element.price %> €</h2>
                       </div>
-                      <p><%= element.description.truncate(250) %> </p>
+                      <p><%= element.description.truncate(200) %> </p>
                     </div>
                   <hr>
                   </div>
@@ -75,7 +75,7 @@ y
                         <h2><%= link_to element.title.truncate(20), "/offers/#{element.id}" %></h2>
                         <h2 class="card-trip-pricing"><%= element.price %> €</h2>
                       </div>
-                      <p><%= element.description.truncate(250) %> </p>
+                      <p><%= element.description.truncate(200) %> </p>
                     </div>
 
                   <hr>
@@ -98,9 +98,9 @@ y
         <div class="inner-container">
           <ul>
               <div class="card_title">
-                <li class="title"><%= link_to element.title, "/offers/#{element.id}" %></li>
+                <li class="title"><%=element.title%></li>
                 <% if element.user.photo.attached? %>
-                <%= cl_image_tag(element.user.photo.key, width: 150, height: 150, crop: :thumb, gravity: :face, class: "avatar-regular", alt: "avatar") %>
+                <%= cl_image_tag(element.user.photo.key, width: 60, height: 60, crop: :thumb, gravity: :face, class: "avatar-regular", alt: "avatar") %>
                 <% end %>
               </div>
               <div class="description"><%= element.description.truncate(60)%></div>
