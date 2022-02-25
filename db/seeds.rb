@@ -168,8 +168,8 @@ Offer.delete_all
 puts 'Creating 16 offers'
 
 offer = Offer.new(
-    title: 'Will bake you a cake',
-    description: 'If you need someone to bake you a cake for your birthday, I can help.',
+    title: 'Ikea friend',
+    description: "I'll jump on an ikea table and sing to you.",
     location: 'Berlin',
     price: rand(1.0...100.0).round(2),
     user_id: 1
@@ -177,8 +177,8 @@ offer = Offer.new(
 offer.save!
 
 offer = Offer.new(
-  title: 'Lets go feed the ducks',
-  description: "Let's go down to the park and feed the ducks, how does that sound?",
+  title: 'Friends with ben..',
+  description: "With benjamin franklin figurine collections! If you like figurines as much as me, let's be friends.",
   location: 'Hamburg',
   price: rand(1.0...100.0).round(2),
   user_id: 2
@@ -186,8 +186,8 @@ offer = Offer.new(
 offer.save!
 
 offer = Offer.new(
-  title: 'Will bake you a cake',
-  description: 'If you need someone to bake you a cake for your birthday, I can help.',
+  title: 'Fortnite friend',
+  description: 'Do you like fortnite? I like fortnie. I play lots of fortnite, how about you? Fortnite?',
   location: 'Leipzig',
   price: rand(1.0...100.0).round(2),
   user_id: 3
@@ -195,8 +195,8 @@ offer = Offer.new(
 offer.save!
 
 offer = Offer.new(
-  title: Faker::Name.male_first_name,
-  description: Faker::Hipster.paragraph,
+  title: 'Trains?',
+  description: "Choo choo choose me. Toy trains are the best, let's play with our trains together",
   location: 'Hanover',
   price: rand(1.0...100.0).round(2),
   user_id: 4
@@ -204,8 +204,8 @@ offer = Offer.new(
 offer.save!
 
 offer = Offer.new(
-  title: Faker::Name.male_first_name,
-  description: Faker::Hipster.paragraph,
+  title: 'Will bake you a cake',
+  description: 'If you need someone to bake you a cake for your birthday, I can help.',
   location: 'Dresden',
   price: rand(1.0...100.0).round(2),
   user_id: 5
@@ -213,93 +213,95 @@ offer = Offer.new(
 offer.save!
 
 offer = Offer.new(
-  title: Faker::Name.male_first_name,
-  description: Faker::Hipster.paragraph,
+  title: 'Coder buddy',
+  description: "Do you like ruining your life as much as I do? Then let's code together",
   location: 'Cologne',
   price: rand(1.0...100.0).round(2),
-  user_id: rand(1..10)
+  user_id: 6
 )
 offer.save!
 
 offer = Offer.new(
-  title: Faker::Name.male_first_name,
-  description: Faker::Hipster.paragraph,
+  title: 'Trains?',
+  description: "Choo choo choose me. Toy trains are the best, let's play with our trains together",
   location: 'Bremen',
   price: rand(1.0...100.0).round(2),
-  user_id: rand(1..10)
+  user_id: 7
 )
 offer.save!
 
 offer = Offer.new(
-  title: Faker::Name.male_first_name,
-  description: Faker::Hipster.paragraph,
+  title: 'Lets go feed the ducks',
+  description: "Let's go down to the park and feed the ducks, how does that sound?",
   location: 'Bielefeld',
   price: rand(1.0...100.0).round(2),
-  user_id: rand(1..10)
+  user_id: 8
 )
 offer.save!
 
 offer = Offer.new(
-  title: Faker::Name.female_first_name,
-  description: Faker::Hipster.paragraph,
+  title: 'Camp friendzone',
+  description: "Do you like camping? Do you want to camp with a friend? Let's camp together.",
   location: 'Frankfurt',
   price: rand(1.0...100.0).round(2),
-  user_id: rand(1..10)
+  user_id: 9
 )
 offer.save!
 
 offer = Offer.new(
-  title: Faker::Name.female_first_name,
-  description: Faker::Hipster.paragraph,
+  title: 'Berghain Friend',
+  description: "Need help getting in? Need a cool friend? I'll help you out.",
   location: 'Munich',
   price: rand(1.0...100.0).round(2),
-  user_id: rand(1..10)
+  user_id: 10
 )
 offer.save!
 
 offer = Offer.new(
-  title: Faker::Name.female_first_name,
-  description: Faker::Hipster.paragraph,
+  title: 'Museums are cool',
+  description: 'So is startrek, what a friend to watch startrek with?',
   location: 'Essen',
   price: rand(1.0...100.0).round(2),
-  user_id: rand(1..10)
+  user_id: 11
 )
 offer.save!
 
 offer = Offer.new(
-  title: Faker::Name.female_first_name,
-  description: Faker::Hipster.paragraph,
+  title: 'Kite flying buddy',
+  description: "Because 'go fly a kite' doesn't mean you gotta do it alone.",
   location: 'Halle',
   price: rand(1.0...100.0).round(2),
-  user_id: rand(1..10)
+  user_id: 6
 )
 offer.save!
 
 offer = Offer.new(
-  title: Faker::Name.female_first_name,
-  description: Faker::Hipster.paragraph,
+  title: 'Dan here',
+  description: 'Will be your friend, we can complain about Tony if you want..',
   location: 'Wurzburg',
   price: rand(1.0...100.0).round(2),
-  user_id: rand(1..10)
+  user_id: 3
 )
 offer.save!
 
 offer = Offer.new(
-  title: Faker::Name.female_first_name,
-  description: Faker::Hipster.paragraph,
+  title: 'Harry potter marathon buddy',
+  description: 'I love potter, lets be friends.',
   location: 'Augsburg',
   price: rand(1.0...100.0).round(2),
-  user_id: rand(1..10)
+  user_id: 9
 )
 offer.save!
 
 offer = Offer.new(
-  title: Faker::Name.female_first_name,
-  description: Faker::Hipster.paragraph,
+  title: 'Amadeous',
+  description: 'I like nuts',
   location: 'Wolfsburg',
   price: rand(1.0...100.0).round(2),
-  user_id: rand(1..10)
+  user_id: 3
 )
 offer.save!
 
 puts '16 offers created!'
+
+# comment
