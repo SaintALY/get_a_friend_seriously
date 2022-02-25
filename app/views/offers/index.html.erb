@@ -4,7 +4,7 @@ y
     <% @offers[0..0].each do |element| %>
                 <div class="card-trip picture1">
                 <% if element.user.photo.attached? %>
-                <%= cl_image_tag element.user.photo.key, class: "card-image", alt: "image" %>
+                <%= cl_image_tag(element.user.photo.key, gravity: :face, class: "card-image", alt: "image") %>
                 <% end %>
                   <div class="card-trip-infos">
                     <div>
@@ -25,7 +25,7 @@ y
                 <%= cl_image_tag(element.photo.key) if element.photo.key %>
                 <div class="card-trip picture2">
                 <% if element.user.photo.attached? %>
-                <%= cl_image_tag element.user.photo.key, class: "card-image", alt: "image" %>
+                <%= cl_image_tag(element.user.photo.key, gravity: :face, class: "card-image", alt: "image") %>
                 <% end %>
                   <div class="card-trip-infos">
                     <div>
@@ -46,7 +46,7 @@ y
                 <%= cl_image_tag(element.photo.key) if element.photo.key %>
                 <div class="card-trip picture3">
                 <% if element.user.photo.attached? %>
-                <%= cl_image_tag element.user.photo.key, class: "card-image", alt: "image" %>
+                <%= cl_image_tag(element.user.photo.key, gravity: :face, class: "card-image", alt: "image") %>
                 <% end %>
                   <div class="card-trip-infos">
                     <div>
@@ -67,7 +67,7 @@ y
                 <%= cl_image_tag(element.photo.key) if element.photo.key %>
                 <div class="card-trip picture4">
                 <% if element.user.photo.attached? %>
-                <%= cl_image_tag element.user.photo.key, class: "card-image", alt: "image" %>
+                <%= cl_image_tag(element.user.photo.key, gravity: :face, class: "card-image", alt: "image") %>
                 <% end %>
                   <div class="card-trip-infos">
                     <div>
