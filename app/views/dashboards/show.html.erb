@@ -13,14 +13,13 @@
           <div class="card-my-orders">
             <% @bookings.each do |element| %>
             <div class="col-33">
-              <p class="my-bookings-title"><%= element.offer.title  %></p>
+              <p class="my-bookings-title"><strong><%= element.offer.title  %></strong></p>
               <p><%= element.offer.description  %></p>
               <p>Map: <%= element.offer.location  %></p>
               <p>Price: <%= element.offer.price  %> €</p>
               <p>Event Starts: <%= element.start_date.strftime("%A, %b %d")  %></p>
               <p>Event Ends: <%= element.end_date.strftime("%A, %b %d")  %></p>
               <p>Event created on: <%= element.offer.created_at.strftime("%A, %b %d")  %></p>
-              <p>-------------</p>
            </div>
                 <!-- TODO: map should show location of -->
             <div class="map-of-order">

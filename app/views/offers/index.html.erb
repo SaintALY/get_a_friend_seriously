@@ -1,71 +1,87 @@
 <%= render "layouts/components/banner" %>
 <div class="offer_grid1">
-y
+
     <% @offers[0..0].each do |element| %>
                 <div class="card-trip picture1">
                 <% if element.user.photo.attached? %>
-                <%= cl_image_tag element.user.photo.key, class: "card-image", alt: "image" %>
+                <%= cl_image_tag(element.user.photo.key, gravity: :face, class: "card-image", alt: "image") %>
                 <% end %>
                   <div class="card-trip-infos">
                     <div>
                       <div class="price">
-                        <h2><%= link_to element.title, "/offers/#{element.id}" %></h2>
+                        <h2><%= link_to element.title.truncate(20), "/offers/#{element.id}" %></h2>
                         <h2 class="card-trip-pricing"><%= element.price %> €</h2>
                       </div>
-                      <p><%= element.description%> </p>
+                      <p><%= element.description.truncate(200)%> </p>
                     </div>
                   <hr>
                   </div>
+                  <div class="location-highlight">
+                    <i class="far fa-compass "></i> <%= element.location %></li>
+                  </div>
                 </div>
     <% end %>
-      <% @offers[0..0].each do |element| %>
+      <% @offers[1..1].each do |element| %>
+                <%= cl_image_tag(element.photo.key) if element.photo.key %>
                 <div class="card-trip picture2">
                 <% if element.user.photo.attached? %>
-                <%= cl_image_tag element.user.photo.key, class: "card-image", alt: "image" %>
+                <%= cl_image_tag(element.user.photo.key, gravity: :face, class: "card-image", alt: "image") %>
                 <% end %>
                   <div class="card-trip-infos">
                     <div>
                       <div class="price">
-                        <h2><%= link_to element.title, "/offers/#{element.id}" %></h2>
+                        <h2><%= link_to element.title.truncate(20), "/offers/#{element.id}" %></h2>
                         <h2 class="card-trip-pricing"><%= element.price %> €</h2>
                       </div>
-                      <p><%= element.description %> </p>
+                      <p><%= element.description.truncate(200) %> </p>
                     </div>
                   <hr>
                   </div>
+                  <div class="location-highlight">
+                    <i class="far fa-compass "></i> <%= element.location %></li>
+                  </div>
                 </div>
     <% end %>
-      <% @offers[0..0].each do |element| %>
+      <% @offers[2..2].each do |element| %>
+                <%= cl_image_tag(element.photo.key) if element.photo.key %>
                 <div class="card-trip picture3">
                 <% if element.user.photo.attached? %>
-                <%= cl_image_tag element.user.photo.key, class: "card-image", alt: "image" %>
+                <%= cl_image_tag(element.user.photo.key, gravity: :face, class: "card-image", alt: "image") %>
                 <% end %>
                   <div class="card-trip-infos">
                     <div>
                       <div class="price">
-                        <h2><%= link_to element.title, "/offers/#{element.id}" %></h2>
+                        <h2><%= link_to element.title.truncate(20), "/offers/#{element.id}" %></h2>
                         <h2 class="card-trip-pricing"><%= element.price %> €</h2>
                       </div>
-                      <p><%= element.description %> </p>
+                      <p><%= element.description.truncate(200) %> </p>
                     </div>
                   <hr>
                   </div>
+                  <div class="location-highlight">
+                    <i class="far fa-compass "></i> <%= element.location %></li>
+                  </div>
                 </div>
     <% end %>
-      <% @offers[0..0].each do |element| %>
+      <% @offers[3..3].each do |element| %>
+                <%= cl_image_tag(element.photo.key) if element.photo.key %>
                 <div class="card-trip picture4">
                 <% if element.user.photo.attached? %>
-                <%= cl_image_tag element.user.photo.key, class: "card-image", alt: "image" %>
+                <%= cl_image_tag(element.user.photo.key, gravity: :face, class: "card-image", alt: "image") %>
                 <% end %>
                   <div class="card-trip-infos">
                     <div>
                       <div class="price">
-                        <h2><%= link_to element.title, "/offers/#{element.id}" %></h2>
+                        <h2><%= link_to element.title.truncate(20), "/offers/#{element.id}" %></h2>
                         <h2 class="card-trip-pricing"><%= element.price %> €</h2>
                       </div>
-                      <p><%= element.description %> </p>
+                      <p><%= element.description.truncate(200) %> </p>
                     </div>
+
                   <hr>
+                  </div>
+                  <div class="location-highlight">
+                    <i class="far fa-compass "></i> <%= element.location %></li>
                   </div>
                 </div>
     <% end %>
@@ -73,23 +89,23 @@ y
 
 </div>
 
-<div class="with-map">
+<div class="with-map ">
   <div class="left">
     <%# <div class="offer_grid"> %>
-      <% @offers[0..11].each do |element| %>
+      <% @offers[4..15].each do |element| %>
+        <%= link_to  "/offers/#{element.id}" do  %>
       <div class="container">
         <div class="inner-container">
           <ul>
               <div class="card_title">
-                <li class="title"><%= link_to element.title, "/offers/#{element.id}" %></li>
+                <li class="title"><%=element.title%></li>
                 <% if element.user.photo.attached? %>
-                <%= cl_image_tag(element.user.photo.key, width: 150, height: 150, crop: :thumb, gravity: :face, class: "avatar-regular", alt: "avatar") %>
+                <%= cl_image_tag(element.user.photo.key, width: 60, height: 60, crop: :thumb, gravity: :face, class: "avatar-regular", alt: "avatar") %>
                 <% end %>
               </div>
               <div class="description"><%= element.description.truncate(60)%></div>
               <hr>
               <div class="card_info">
-              <!--location here  -->
                 <li><i class="far fa-compass"></i> <%= element.location %></li>
               </div>
               <!--
@@ -103,6 +119,7 @@ y
         </div>
 
       </div>
+        <% end %>
       <% end %>
   </div>
   <div class="right">

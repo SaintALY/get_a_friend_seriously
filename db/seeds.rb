@@ -180,8 +180,8 @@ offer = Offer.new(
 offer.save!
 
 offer = Offer.new(
-  title: Faker::Name.male_first_name,
-  description: Faker::Hipster.paragraph,
+  title: 'Lets go feed the ducks',
+  description: "Let's go down to the park and feed the ducks, how does that sound?",
   location: 'Hamburg',
   price: rand(1.0...100.0).round(2),
   user_id: 2
@@ -189,8 +189,8 @@ offer = Offer.new(
 offer.save!
 
 offer = Offer.new(
-  title: Faker::Name.male_first_name,
-  description: Faker::Hipster.paragraph,
+  title: 'Will bake you a cake',
+  description: 'If you need someone to bake you a cake for your birthday, I can help.',
   location: 'Leipzig',
   price: rand(1.0...100.0).round(2),
   user_id: 3
@@ -305,6 +305,7 @@ offer = Offer.new(
 )
 offer.save!
 
+<<<<<<< HEAD
 offer = Offer.new(
   title: Faker::Name.male_first_name,
   description: Faker::Hipster.paragraph,
@@ -335,5 +336,7 @@ end
 
 puts '15 offers created!'
 =======
+=======
+>>>>>>> db01f45a381810a8f3d30f44e2abd0f0554fb676
 puts '16 offers created!'
 >>>>>>> b2c78f2911e9858f3b74921773e4acbb97cecf1d
