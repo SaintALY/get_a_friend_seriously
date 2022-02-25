@@ -1,11 +1,11 @@
 <%= render "layouts/components/banner" %>
 <div class="offer_grid1">
-
-
+y
     <% @offers[0..0].each do |element| %>
-                <%= cl_image_tag(element.photo.key) if element.photo.key %>
                 <div class="card-trip picture1">
-                  <%= image_tag "https://kitt.lewagon.com/placeholder/users/cveneziani", class: "card-image", alt: "image" %>
+                <% if element.user.photo.attached? %>
+                <%= cl_image_tag element.user.photo.key, class: "card-image", alt: "image" %>
+                <% end %>
                   <div class="card-trip-infos">
                     <div>
                       <div class="price">
@@ -24,7 +24,9 @@
       <% @offers[1..1].each do |element| %>
                 <%= cl_image_tag(element.photo.key) if element.photo.key %>
                 <div class="card-trip picture2">
-                  <%= image_tag "https://kitt.lewagon.com/placeholder/users/cveneziani", class: "card-image", alt: "image" %>
+                <% if element.user.photo.attached? %>
+                <%= cl_image_tag element.user.photo.key, class: "card-image", alt: "image" %>
+                <% end %>
                   <div class="card-trip-infos">
                     <div>
                       <div class="price">
@@ -43,7 +45,9 @@
       <% @offers[2..2].each do |element| %>
                 <%= cl_image_tag(element.photo.key) if element.photo.key %>
                 <div class="card-trip picture3">
-                  <%= image_tag "https://kitt.lewagon.com/placeholder/users/cveneziani", class: "card-image", alt: "image" %>
+                <% if element.user.photo.attached? %>
+                <%= cl_image_tag element.user.photo.key, class: "card-image", alt: "image" %>
+                <% end %>
                   <div class="card-trip-infos">
                     <div>
                       <div class="price">
@@ -62,7 +66,9 @@
       <% @offers[3..3].each do |element| %>
                 <%= cl_image_tag(element.photo.key) if element.photo.key %>
                 <div class="card-trip picture4">
-                  <%= image_tag "https://kitt.lewagon.com/placeholder/users/cveneziani", class: "card-image", alt: "image" %>
+                <% if element.user.photo.attached? %>
+                <%= cl_image_tag element.user.photo.key, class: "card-image", alt: "image" %>
+                <% end %>
                   <div class="card-trip-infos">
                     <div>
                       <div class="price">
@@ -91,11 +97,11 @@
       <div class="container">
         <div class="inner-container">
           <ul>
-              <%= cl_image_tag(element.photo.key) if element.photo.key %>
-
               <div class="card_title">
-                <li class="title"><%= element.title.truncate(6) %></li>
-                <%= image_tag "https://kitt.lewagon.com/placeholder/users/cveneziani", class: "avatar-regular", alt: "avatar" %>
+                <li class="title"><%= link_to element.title, "/offers/#{element.id}" %></li>
+                <% if element.user.photo.attached? %>
+                <%= cl_image_tag(element.user.photo.key, width: 150, height: 150, crop: :thumb, gravity: :face, class: "avatar-regular", alt: "avatar") %>
+                <% end %>
               </div>
               <div class="description"><%= element.description.truncate(60)%></div>
               <hr>
@@ -116,18 +122,14 @@
         <% end %>
       <% end %>
   </div>
-
-
   <div class="right">
-        <div style="width: 100%; height: 750px; border-radius: 5px;"
+        <div style="width: 450px; height: 750px; border-radius: 5px;"
           data-controller="mapbox"
           data-mapbox-markers-value="<%= @markers.to_json %>"
           data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
         </div>
   </div>
 </div>
-
-
 
 
 </div>
