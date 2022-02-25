@@ -98,7 +98,7 @@ y
         <div class="inner-container">
           <ul>
               <div class="card_title">
-                <li class="title"><%= link_to element.title, "/offers/#{element.id}" %></li>
+                <li class="title"><%= link_to element.title.truncate(6), "/offers/#{element.id}" %></li>
                 <% if element.user.photo.attached? %>
                 <%= cl_image_tag(element.user.photo.key, width: 150, height: 150, crop: :thumb, gravity: :face, class: "avatar-regular", alt: "avatar") %>
                 <% end %>
