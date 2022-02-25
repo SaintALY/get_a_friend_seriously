@@ -98,7 +98,9 @@
         <div class="inner-container">
           <ul>
               <div class="card_title">
-                <li class="title"><%=element.title%></li>
+
+                <li class="title"><%=element.title.truncate(6)%></li>
+
                 <% if element.user.photo.attached? %>
                 <%= cl_image_tag(element.user.photo.key, width: 60, height: 60, crop: :thumb, gravity: :face, class: "avatar-regular", alt: "avatar") %>
                 <% end %>
