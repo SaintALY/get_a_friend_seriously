@@ -206,7 +206,7 @@ offer.save!
 offer = Offer.new(
   title: Faker::Name.male_first_name,
   description: Faker::Hipster.paragraph,
-  location: 'Dresdon',
+  location: 'Dresden',
   price: rand(1.0...100.0).round(2),
   user_id: 5
 )
