@@ -177,8 +177,8 @@ offer = Offer.new(
 offer.save!
 
 offer = Offer.new(
-  title: Faker::Name.male_first_name,
-  description: Faker::Hipster.paragraph,
+  title: 'Lets go feed the ducks',
+  description: "Let's go down to the park and feed the ducks, how does that sound?",
   location: 'Hamburg',
   price: rand(1.0...100.0).round(2),
   user_id: 2
@@ -186,8 +186,8 @@ offer = Offer.new(
 offer.save!
 
 offer = Offer.new(
-  title: Faker::Name.male_first_name,
-  description: Faker::Hipster.paragraph,
+  title: 'Will bake you a cake',
+  description: 'If you need someone to bake you a cake for your birthday, I can help.',
   location: 'Leipzig',
   price: rand(1.0...100.0).round(2),
   user_id: 3
@@ -297,15 +297,6 @@ offer = Offer.new(
   title: Faker::Name.female_first_name,
   description: Faker::Hipster.paragraph,
   location: 'Wolfsburg',
-  price: rand(1.0...100.0).round(2),
-  user_id: rand(1..10)
-)
-offer.save!
-
-offer = Offer.new(
-  title: Faker::Name.male_first_name,
-  description: Faker::Hipster.paragraph,
-  location: 'Kassel',
   price: rand(1.0...100.0).round(2),
   user_id: rand(1..10)
 )
