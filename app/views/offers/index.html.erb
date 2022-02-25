@@ -1,9 +1,11 @@
 <%= render "layouts/components/banner" %>
 <div class="offer_grid1">
-
+y
     <% @offers[0..0].each do |element| %>
                 <div class="card-trip picture1">
+                <% if element.user.photo.attached? %>
                 <%= cl_image_tag element.user.photo.key, class: "card-image", alt: "image" %>
+                <% end %>
                   <div class="card-trip-infos">
                     <div>
                       <div class="price">
@@ -18,7 +20,9 @@
     <% end %>
       <% @offers[0..0].each do |element| %>
                 <div class="card-trip picture2">
+                <% if element.user.photo.attached? %>
                 <%= cl_image_tag element.user.photo.key, class: "card-image", alt: "image" %>
+                <% end %>
                   <div class="card-trip-infos">
                     <div>
                       <div class="price">
@@ -33,7 +37,9 @@
     <% end %>
       <% @offers[0..0].each do |element| %>
                 <div class="card-trip picture3">
+                <% if element.user.photo.attached? %>
                 <%= cl_image_tag element.user.photo.key, class: "card-image", alt: "image" %>
+                <% end %>
                   <div class="card-trip-infos">
                     <div>
                       <div class="price">
@@ -48,7 +54,9 @@
     <% end %>
       <% @offers[0..0].each do |element| %>
                 <div class="card-trip picture4">
+                <% if element.user.photo.attached? %>
                 <%= cl_image_tag element.user.photo.key, class: "card-image", alt: "image" %>
+                <% end %>
                   <div class="card-trip-infos">
                     <div>
                       <div class="price">
@@ -74,7 +82,9 @@
           <ul>
               <div class="card_title">
                 <li class="title"><%= link_to element.title, "/offers/#{element.id}" %></li>
-                <%= cl_image_tag element.user.photo.key, class: "avatar-regular", alt: "avatar" %>
+                <% if element.user.photo.attached? %>
+                <%= cl_image_tag(element.user.photo.key, width: 150, height: 150, crop: :thumb, gravity: :face, class: "avatar-regular", alt: "avatar") %>
+                <% end %>
               </div>
               <div class="description"><%= element.description.truncate(60)%></div>
               <hr>
@@ -95,9 +105,8 @@
       </div>
       <% end %>
   </div>
-
   <div class="right">
-        <div style="width: 100%; height: 750px; border-radius: 5px;"
+        <div style="width: 450px; height: 750px; border-radius: 5px;"
           data-controller="mapbox"
           data-mapbox-markers-value="<%= @markers.to_json %>"
           data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
