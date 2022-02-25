@@ -173,7 +173,6 @@ offer = Offer.new(
     title: 'Will bake you a cake',
     description: 'If you need someone to bake you a cake for your birthday, I can help.',
     location: 'Berlin',
->>>>>>> b2c78f2911e9858f3b74921773e4acbb97cecf1d
     price: rand(1.0...100.0).round(2),
     user_id: 1
   )
