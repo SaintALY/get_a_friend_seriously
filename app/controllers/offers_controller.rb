@@ -4,6 +4,8 @@ class OffersController < ApplicationController
   def index
     @offers = Offer.all
 
+    @users = User.all
+
     @markers = @offers.geocoded.map do |offer|
       {
         lat: offer.latitude,
