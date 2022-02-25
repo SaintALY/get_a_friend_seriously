@@ -191,7 +191,7 @@ offer.save!
 offer = Offer.new(
   title: Faker::Name.male_first_name,
   description: Faker::Hipster.paragraph,
-  location: Faker::Address.city,
+  location: 'Leipzig',
   price: rand(1.0...100.0).round(2),
   user_id: 3
 )
@@ -200,7 +200,7 @@ offer.save!
 offer = Offer.new(
   title: Faker::Name.male_first_name,
   description: Faker::Hipster.paragraph,
-  location: Faker::Address.city,
+  location: 'Hanover',
   price: rand(1.0...100.0).round(2),
   user_id: 4
 )
@@ -209,7 +209,7 @@ offer.save!
 offer = Offer.new(
   title: Faker::Name.male_first_name,
   description: Faker::Hipster.paragraph,
-  location: Faker::Address.city,
+  location: 'Dresden',
   price: rand(1.0...100.0).round(2),
   user_id: 5
 )
@@ -218,7 +218,7 @@ offer.save!
 offer = Offer.new(
   title: Faker::Name.male_first_name,
   description: Faker::Hipster.paragraph,
-  location: Faker::Address.city,
+  location: 'Cologne',
   price: rand(1.0...100.0).round(2),
   user_id: rand(1..10)
 )
@@ -227,7 +227,7 @@ offer.save!
 offer = Offer.new(
   title: Faker::Name.male_first_name,
   description: Faker::Hipster.paragraph,
-  location: Faker::Address.city,
+  location: 'Bremen',
   price: rand(1.0...100.0).round(2),
   user_id: rand(1..10)
 )
@@ -236,7 +236,7 @@ offer.save!
 offer = Offer.new(
   title: Faker::Name.male_first_name,
   description: Faker::Hipster.paragraph,
-  location: Faker::Address.city,
+  location: 'Bielefeld',
   price: rand(1.0...100.0).round(2),
   user_id: rand(1..10)
 )
@@ -245,7 +245,7 @@ offer.save!
 offer = Offer.new(
   title: Faker::Name.female_first_name,
   description: Faker::Hipster.paragraph,
-  location: Faker::Address.city,
+  location: 'Frankfurt',
   price: rand(1.0...100.0).round(2),
   user_id: rand(1..10)
 )
@@ -254,7 +254,7 @@ offer.save!
 offer = Offer.new(
   title: Faker::Name.female_first_name,
   description: Faker::Hipster.paragraph,
-  location: Faker::Address.city,
+  location: 'Munich',
   price: rand(1.0...100.0).round(2),
   user_id: rand(1..10)
 )
@@ -263,7 +263,7 @@ offer.save!
 offer = Offer.new(
   title: Faker::Name.female_first_name,
   description: Faker::Hipster.paragraph,
-  location: Faker::Address.city,
+  location: 'Essen',
   price: rand(1.0...100.0).round(2),
   user_id: rand(1..10)
 )
@@ -272,7 +272,7 @@ offer.save!
 offer = Offer.new(
   title: Faker::Name.female_first_name,
   description: Faker::Hipster.paragraph,
-  location: Faker::Address.city,
+  location: 'Halle',
   price: rand(1.0...100.0).round(2),
   user_id: rand(1..10)
 )
@@ -281,7 +281,7 @@ offer.save!
 offer = Offer.new(
   title: Faker::Name.female_first_name,
   description: Faker::Hipster.paragraph,
-  location: Faker::Address.city,
+  location: 'Wurzburg',
   price: rand(1.0...100.0).round(2),
   user_id: rand(1..10)
 )
@@ -290,7 +290,7 @@ offer.save!
 offer = Offer.new(
   title: Faker::Name.female_first_name,
   description: Faker::Hipster.paragraph,
-  location: Faker::Address.city,
+  location: 'Augsburg',
   price: rand(1.0...100.0).round(2),
   user_id: rand(1..10)
 )
@@ -299,7 +299,7 @@ offer.save!
 offer = Offer.new(
   title: Faker::Name.female_first_name,
   description: Faker::Hipster.paragraph,
-  location: Faker::Address.city,
+  location: 'Wolfsburg',
   price: rand(1.0...100.0).round(2),
   user_id: rand(1..10)
 )
@@ -308,7 +308,7 @@ offer.save!
 offer = Offer.new(
   title: Faker::Name.male_first_name,
   description: Faker::Hipster.paragraph,
-  location: Faker::Address.city,
+  location: 'Kassel',
   price: rand(1.0...100.0).round(2),
   user_id: rand(1..10)
 )
