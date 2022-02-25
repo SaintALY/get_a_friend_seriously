@@ -14,7 +14,7 @@ User.delete_all
 
 puts 'Creating 5 new male users..'
 
-file = URI.open('https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260')
+file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ67_zhQDAs8XpSkuSrjgWgF3zTx4YVSAqag&usqp=CAU')
 user = User.new(
   firstname: Faker::Name.male_first_name,
   lastname: Faker::Name.last_name,
@@ -27,7 +27,7 @@ user = User.new(
 user.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 user.save!
 
-file = URI.open('https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80')
+file = URI.open('https://media-api.xogrp.com/images/1420b655-1e40-477f-9169-59833a888287~cr_0.0.1551.2045')
 user = User.new(
   firstname: Faker::Name.male_first_name,
   lastname: Faker::Name.last_name,
@@ -40,7 +40,7 @@ user = User.new(
 user.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 user.save!
 
-file = URI.open('https://images.unsplash.com/photo-1509460913899-515f1df34fea?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80')
+file = URI.open('https://www.guinnessworldrecords.com/Images/rocky_tcm25-589567.jpg')
 user = User.new(
   firstname: Faker::Name.male_first_name,
   lastname: Faker::Name.last_name,
@@ -53,7 +53,7 @@ user = User.new(
 user.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 user.save!
 
-file = URI.open('https://images.unsplash.com/photo-1503443207922-dff7d543fd0e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80')
+file = URI.open('https://arc-anglerfish-arc2-prod-bostonglobe.s3.amazonaws.com/public/W2QLGEFQDYI6PM5RAZOYS35A3Y.jpg')
 user = User.new(
   firstname: Faker::Name.male_first_name,
   lastname: Faker::Name.last_name,
