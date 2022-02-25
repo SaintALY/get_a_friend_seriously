@@ -1,0 +1,39 @@
+.dashboard {
+  margin: 40px;
+  background-color: $background-nav-foot;
+
+  .my-bookings-title {
+    margin-top: 20px;
+
+  }
+
+  .col {
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+}
+  .row {
+    color: $text-dark;
+    margin-left: 10px;
+    margin-right: 30px;
+    margin-top: 10px;
+
+    .card-my-orders{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .col-33{
+      width: 450px;
+      margin-left: 30px;
+      margin-bottom:50px;
+    }
+
+    .map-of-order {
+      min-width: 450px;
+      max-width: 650px;
+      margin-top:20px;
+      margin-right: 40px;
+      margin-left: 10px;
+    }
+  }

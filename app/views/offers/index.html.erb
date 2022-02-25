@@ -12,7 +12,7 @@
                         <h2><%= link_to element.title, "/offers/#{element.id}" %></h2>
                         <h2 class="card-trip-pricing"><%= element.price %> €</h2>
                       </div>
-                      <p><%= element.description %> </p>
+                      <p><%= element.description%> </p>
                     </div>
                   <hr>
                   </div>
@@ -70,9 +70,10 @@
 
 </div>
 
-
-<div class="offer_grid">
-  <% @offers.each do |element| %>
+<div class="with-map">
+  <div class="left">
+    <%# <div class="offer_grid"> %>
+      <% @offers[0..11].each do |element| %>
       <div class="container">
         <div class="inner-container">
           <ul>
@@ -80,14 +81,13 @@
 
               <div class="card_title">
                 <li class="title"><%= link_to element.title, "/offers/#{element.id}" %></li>
-                <%= image_tag "https://kitt.lewagon.com/placeholder/users/cveneziani", class: "avatar-square", alt: "avatar" %>
+                <%= image_tag "https://kitt.lewagon.com/placeholder/users/cveneziani", class: "avatar-regular", alt: "avatar" %>
               </div>
-              <div class="description"><%= element.description %></div>
+              <div class="description"><%= element.description.truncate(60)%></div>
               <hr>
               <div class="card_info">
               <!--location here  -->
-                <li><i class="far fa-compass"></i><%= element.location %></li>
-                <li class="price"><%= element.price %> €</li>
+                <li><i class="far fa-compass"></i> <%= element.location %></li>
               </div>
               <!--
               <li class="start"><%= element.start_time %></li>
@@ -101,11 +101,18 @@
 
       </div>
       <% end %>
+  </div>
 
-      <div style="width: 100%; height: 600px;"
-        data-controller="mapbox"
-        data-mapbox-markers-value="<%= @markers.to_json %>"
-        data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-      </div>
+  <div class="right">
+        <div style="width: 100%; height: 750px; border-radius: 5px;"
+          data-controller="mapbox"
+          data-mapbox-markers-value="<%= @markers.to_json %>"
+          data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+        </div>
+  </div>
+</div>
+
+
+
 
 </div>
