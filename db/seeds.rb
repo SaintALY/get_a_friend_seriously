@@ -53,9 +53,9 @@ puts 'Creating 15 offers'
     description: Faker::Hipster.paragraph,
     location: Faker::Address.city,
     price: rand(1.0...100.0).round(2),
-    start_time: Faker::Time.backward(days: rand(1...30), period: :evening),
-    end_time: Faker::Time.forward(days: rand(1..3), period: :evening),
-    user_id: rand(1..20) # TODO: breaks if run twice needs to drop DB
+=======
+    user_id: rand(1..20)
+>>>>>>> 149d0cc80f33be749e9668756cdd27d7dbd64894
   )
   offer.save!
 end
