@@ -302,6 +302,6 @@ offer = Offer.new(
 )
 offer.save!
 
-puts '16 offers created!'
+puts '15 offers created!'
 
 # comment
